@@ -1,0 +1,372 @@
+a.navbar-brand{
+	font-family: Viga;
+	font-size: 30px;
+}
+#box form {
+ background:#006699;
+ padding:5px;
+ display:none;
+ position:absolute;
+ top:27px;
+}
+a:hover{
+	text-decoration: none;
+}
+.navbar{
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.navbar{
+	z-index: 2;
+	position: relative;
+	margin-bottom: 0px;
+}
+.navbar-brand img{
+	width: 40px;
+	height: 40px;
+}
+.nav-item img{
+	width: 20px;
+	height: 20px;
+}
+.isi-dropdown{
+	align-content: center;
+}
+.divider hr{
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.fa-user{
+	color: white;
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ACACAC;
+}
+/*.nav-link .dropdown-menu{
+	position: relative;
+	z-index: 1;
+}*/
+.carousel{
+	margin-top: 20px;
+}
+.carousel{
+	z-index: 1;
+	position: relative;
+}
+.carousel::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, rgba(0,0,0,0.7),rgba(0, 0,0,0));
+	position: absolute;
+	bottom: 0;
+}
+.btn{
+	margin: auto;
+}
+.panel{
+	z-index: 1;
+	position: relative;
+	margin-top: -40px;
+	box-shadow: 0 3px 20px rgba(0,0,0,0.5);
+	border-radius: 12px;
+	background-color: white;
+	padding: 30px; 
+	padding-bottom: 0px;
+}
+.panel img{
+	width: 80px;
+	height: 80px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.panel h4{
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.panel p{
+	font-size: 14px;
+	color: #ACACAC;
+	margin-top: -5px;
+	font-weight: 200;
+}
+.panel a{
+	color: black;
+}
+.panel a:hover{
+	text-decoration: none;
+	color: black;
+}
+.pemerintah figure h5{
+	color: #1C2C5D;
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+}
+figure img{
+	width: 150px;
+}
+.pemerintah figure p{
+	text-align: center;
+	font-size: 16px;
+}
+.aparat{
+	text-align: center;
+}
+/*.aparat h5{
+	font-weight: bold;
+}
+.r*/ow-p{
+	padding-top: 60px;
+}
+
+.kepala img{
+	width: 200px;
+}
+.judul h1{
+	font-size: 30px;
+	margin-top: 50px;
+	text-align: center;
+	font-family: 'Patua One', cursive;
+	text-transform: uppercase;
+}
+.judul h4{
+	font-size: 30px;
+	margin-top: 100px;
+	text-align: center;
+	font-family: 'Patua One', cursive;
+	text-transform: uppercase;
+}
+.berita{
+	margin-top: 30px;
+}
+.detail-berita h3{
+	font-size: 40px;
+	font-weight: bold;
+}
+element.style {
+    font-family: 'Belgrano', serif;
+    font-size: 18px;
+    background-color: white;
+}
+.card{
+	margin: auto;
+	margin-top:10px;
+}
+.card-title{
+	font-weight: bold;}
+.newest img{
+    height: 200px;
+}
+.mt-section{
+	margin-top: 100px;
+}
+.galeri h5{
+	font-weight: 200;
+	font-style: italic;
+}
+.row .footer{
+	margin: auto;
+	
+}
+.nav-tabs .nav-link.active{
+	border-top: 4px solid;
+	color: black;
+}
+.nav-tabs .nav-link{
+	color: #495057;
+}
+.table td,
+.table th {
+  padding: 0px;
+  font: 300 14px/1.5 'Oxygen', sans-serif;
+  text-align: center;
+}
+
+.tooltip .arrow:before {
+  border-left-color: #dc3545;
+}
+.tooltip .tooltip-inner {
+  background: #dc3545;
+}
+#myChart{
+	display: block !important; 
+	width: 1000px !important;
+	 height: 500px !important;}
+#mypie{
+	display: block !important; 
+	width: 1000px !important;
+	 height: 500px !important;}
+}
+.tab-content{
+	    border: 1px solid #EEE;
+	    border-top: 0;
+	    padding: 15px;
+}
+.table-sm td{
+	padding: 0.3rem;
+	
+}
+footer{
+	background-color: #414140;
+	position: static;
+	bottom: 0;
+}
+.footer p{
+	font-size: 0.9em;
+	color: #A9A9A5;
+}
+.social-link li{
+	float: left;
+	list-style: none;
+}
+.social-link li a:hover{
+	text-decoration: none;	
+}
+.social-link li a i {
+	margin-left: 10px;
+	color: white;
+	display: block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	/* border-radius: 50%; */
+	/* background-color: #ACACAC; */
+}
+.fa-chevron-circle-up{
+	margin-top: 0.5rem;
+	color: #A9A9A5;
+}
+/*about*/
+.panel-content{
+	z-index: 1;
+	position: relative;
+	margin-top: -10px;
+	box-shadow: 0 3px 20px rgba(0,0,0,0.5);
+	border-radius: 12px;
+	background-color: white;
+	padding: 20px; 
+}
+.berita-head{
+	z-index: 1;
+	position: relative;
+	margin-top: -10px;
+	box-shadow: 0 3px 20px rgba(0,0,0,0.5);
+	border-radius: 12px;
+	background-color: white;
+	padding: 0px; 
+}
+.panel-content h1{
+	font-size: 30px;
+	font-family: 'Patua One', cursive;
+}
+.panel-content h1 a{
+	color: rgba(0,0,0,.9);;
+	text-transform: uppercase;
+}
+.panel-content h1 a:hover{
+	color: rgba(0,0,0,.9);
+	text-decoration: none;
+}
+
+.tu{
+	border: 1px solid #ACACAC;
+	margin-top: -10px;
+	padding: auto;
+}
+
+.komen{
+	font-family: Viga;
+}
+.gal-card{
+	z-index: 1;
+	position: relative;
+	margin-top: 10px;
+	box-shadow: 0 3px 20px rgba(0,0,0,0.5);
+	border-radius: 12px;
+	background-color: #ACACAC;
+	padding: 20px; 
+}
+.gal-card img{
+	width: 250px;
+	height: 200px;
+}
+.gal-card h5{
+	font-family: 'Patua One', cursive;
+}
+.gal-ut{
+	margin-top: -20px;
+}
+.chart-container{
+		min-width: 660px;
+		min-height: 330px;
+	}
+	/*// Small devices (landscape phones, 576px and up)*/
+
+.scrollable{
+	height: 50%;
+  overflow-x: scroll;
+	}
+
+.dropdown-menu{
+	transition: 2000 ease-in-out;
+}
+
+@media (min-width: 992px) {
+	.chart-container{
+		height:40vmax; width:80vmax;
+	}
+	.scrollable{
+		overflow-x: hidden;
+	}
+	.carousel-item img{
+		height: 480px;
+	}
+	.judul h4{
+		font-size: 35px;
+	}
+	.judul h1{
+		font-size: 35px;
+	}
+	.berita{
+		margin-top: 60px;
+	}
+	h5.judul-slide{
+		font-family: 'Patua One', cursive;
+		text-shadow: 1px 1px 1px black;
+	}
+	.isih5{
+		font-family: 'Patua One', cursive;
+		text-shadow: 1px 1px 1px black;
+	}
+	/*.nav-link:hover{
+		border-bottom: 3px solid black;
+	}*/
+
+	.nav-link:after::hover{
+		content: '';
+		display: block;
+		border-bottom: 3px solid rgb(115, 115, 112);
+		width: 50%;
+		margin:auto;
+		padding-bottom: 5px;
+		margin-bottom: -8px;
+	}
+	/*.detail-berita img{
+	width: 500px; height: 400px;
+}*/
+	.footer .kanan{
+		float: right;
+	}
+	/*Pemerintah di  landing page*/
+	.child{
+	margin-top: -150px;
+}
+	
+}
