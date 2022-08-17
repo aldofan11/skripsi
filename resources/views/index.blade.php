@@ -316,31 +316,31 @@
 
             <div class="col-md-4">
               <div class="card m-4 newest shadow-sm " >
-                <img src="img/img2.png" class="card-img-top" alt="">
+                <img src="img/galeri1.jpg" class="card-img-top" alt="">
                 <div class="card-body">
-                  <p class="card-text">Pacar Gua
+                  <p class="card-text">Sosialisasi
                   </p>
-                  <p class="card-text"><small class="text-muted">Diupload 3 menit yang lalu</small></p>
+                  <p class="card-text"><small class="text-muted">Diupload 3 hari yang lalu</small></p>
                 </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="card m-4 newest shadow-sm " >
-                <img src="img/img2.png" class="card-img-top" alt="">
+                <img src="img/galeri2.jpg" class="card-img-top" alt="">
                 <div class="card-body">
-                  <p class="card-text">Pacar Gua
+                  <p class="card-text">Foto penanaman pohon 
                   </p>
-                  <p class="card-text"><small class="text-muted">Diupload 3 menit yang lalu</small></p>
+                  <p class="card-text"><small class="text-muted">Diupload 10 hari yang lalu</small></p>
                 </div>
               </div>
             </div> 
             <div class="col-md-4">
               <div class="card m-4 newest shadow-sm " >
-                <img src="img/img2.png" class="card-img-top" alt="">
+                <img src="img/galeri4.jpg" class="card-img-top" alt="">
                 <div class="card-body">
-                  <p class="card-text">Pacar Gua
+                  <p class="card-text">Pakpol
                   </p>
-                  <p class="card-text"><small class="text-muted">Diupload 3 menit yang lalu</small></p>
+                  <p class="card-text"><small class="text-muted">Diupload  20 hari yang lalu</small></p>
                 </div>
               </div>
             </div>  

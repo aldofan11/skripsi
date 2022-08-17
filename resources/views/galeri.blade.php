@@ -156,7 +156,7 @@
               <div class="card mb-4 shadow-sm " >
                 <img src="img/galeri4.jpg" class="card-img-top" alt="">
                 <div class="card-body">
-                  <p class="card-text">Pacar Gua
+                  <p class="card-text">Pakpol
                   </p>
                   <p class="card-text"><small class="text-muted">Diupload 3 menit yang lalu</small></p>
                 </div>
@@ -164,9 +164,9 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm " >
-                <img src="img/img2.png" class="card-img-top" alt="">
+                <img src="img/kirabudaya.jpg" class="card-img-top" alt="">
                 <div class="card-body">
-                  <p class="card-text">Pacar Gua
+                  <p class="card-text">kirab budaya
                   </p>
                   <p class="card-text"><small class="text-muted">Diupload 3 menit yang lalu</small></p>
                 </div>
@@ -174,9 +174,9 @@
             </div> 
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm " >
-                <img src="img/img2.png" class="card-img-top" alt="">
+                <img src="img/gambar23.jpeg" class="card-img-top" alt="">
                 <div class="card-body">
-                  <p class="card-text">Pacar Gua
+                  <p class="card-text">Kirab budaya
                   </p>
                   <p class="card-text"><small class="text-muted">Diupload 3 menit yang lalu</small></p>
                 </div>
