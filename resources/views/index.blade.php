@@ -97,13 +97,7 @@
             <!-- login -->
             <!-- Modal -->
             <div id="box">
-              <button type="button" class="btn" id="button"><i class="fas fa-user fa-lg"></i></button>
-            
-              <form action="" id="form">
-                <p><input type="text" placeholder="username"/></p>
-                <p><input type="password" placeholder="password" /></p>
-                <p><input type="submit" value="Sign in" /></p>
-              </form>
+            <a type="button" class="btn" href="/login"><i class="fas fa-user fa-lg"></i></a>
             </div>
             </li>
           </ul>            

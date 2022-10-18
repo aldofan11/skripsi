@@ -95,7 +95,7 @@
           
             <!-- login -->
             <!-- Modal -->
-              <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-user fa-lg"></i></button>
+              <a type="button" class="btn" href="/login"><i class="fas fa-user fa-lg"></i></a>
             </li>
           </ul>            
        <!-- akhir login -->      

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -64,4 +65,8 @@ Route::get('/data agama', function () {
 
 Route::get('/data gender', function () {
     return view('datagender');
+});
+
+Route::group(['middleware'=>['auth'], 'prefix'=> 'dashboard'], function(){
+    Route::get('/', [DashboardController::class, 'index']);
 });
