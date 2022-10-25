@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\GaleriController;
 use App\Http\Controllers\Admin\KependudukanController;
 use App\Http\Controllers\Admin\MembuatdokumenController;
+use App\Models\Galery;
 use Illuminate\Support\Facades\Route;
 
 
@@ -22,7 +23,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('index');
+    $galeries = Galery::orderBy('created_at', 'desc')->limit(3)->get();
+    // dd($galeries);
+    return view('index', compact('galeries'));
 });
 
 Route::get('/galeri', function () {
