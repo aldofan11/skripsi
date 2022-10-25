@@ -330,7 +330,7 @@
     </div>
     <div class="album">
       <div class="container">
-        <div class="row">
+        <div class="row @if(count($galeries) == 0) justify-content-center @endif">
           @forelse ($galeries as $galery)
           <div class="col-md-4">
             <div class="card m-4 newest shadow-sm ">
@@ -343,7 +343,9 @@
             </div>
           </div>
           @empty
-
+          <div class="col-md-4 text-center">
+            belum ada galeri
+          </div>
           @endforelse
         </div>
       </div>
