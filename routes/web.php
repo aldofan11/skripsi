@@ -1,7 +1,13 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\AparaturController;
+use App\Http\Controllers\Admin\BeritaController;
+use App\Http\Controllers\Admin\GaleriController;
+use App\Http\Controllers\Admin\KependudukanController;
+use App\Http\Controllers\Admin\MembuatdokumenController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -69,4 +75,9 @@ Route::get('/data gender', function () {
 
 Route::group(['middleware'=>['auth'], 'prefix'=> 'dashboard'], function(){
     Route::get('/', [DashboardController::class, 'index']);
+    Route::resource('aparatur', AparaturController::class);
+    Route::resource('berita', BeritaController::class);
+    Route::resource('galeri', GaleriController::class);
+    Route::resource('kependudukan', KependudukanController::class);
+    Route::resource('dokumen', MembuatdokumenController::class);
 });
