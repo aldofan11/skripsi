@@ -51,7 +51,7 @@ class GaleriController extends Controller
                 'status' => true,
                 'message' => [
                     'head' => 'Berhasil',
-                    'body' => "Berita $galery->title berhasil dibuat!"
+                    'body' => "Galeri $galery->title berhasil dibuat!"
                 ]
             ], 201);
         } catch (\Throwable $th) {

@@ -2,25 +2,24 @@
   <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
     <div class="sb-sidenav-menu">
       <div class="nav">
-        <div class="sb-sidenav-menu-heading">Core</div>
-        <a class="nav-link" href="{{route('galeri.index')}}">
+        <div class="sb-sidenav-menu-heading">Dashboard</div>
+        <a class="nav-link  {{str_contains(Request::url(), 'galeri')?'active':''}}" href="{{route('galeri.index')}}">
           <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
           Galeri
         </a>
-        <div class="sb-sidenav-menu-heading">Addons</div>
-        <a class="nav-link" href="{{route('aparatur.index')}}">
+        <a class="nav-link {{str_contains(Request::url(), 'aparatur')?'active':''}}" href="{{route('aparatur.index')}}">
           <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
           Aparatur
         </a>
-        <a class="nav-link" href="{{route('berita.index')}}">
+        <a class="nav-link  {{str_contains(Request::url(), 'berita')?'active':''}}" href="{{route('berita.index')}}">
           <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
           Berita
         </a>
-        <a class="nav-link" href="{{route('kependudukan.index')}}">
+        <a class="nav-link  {{str_contains(Request::url(), 'kependudukan')?'active':''}}" href="{{route('kependudukan.index')}}">
           <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
           kependudukan
         </a>
-        <a class="nav-link" href="{{route('dokumen.index')}}">
+        <a class="nav-link  {{str_contains(Request::url(), 'dokumen')?'active':''}}" href="{{route('dokumen.index')}}">
           <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
           Membuat dokumen
         </a>

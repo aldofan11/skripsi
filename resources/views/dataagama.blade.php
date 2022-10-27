@@ -34,7 +34,7 @@
   <body>
 <!-- navbar --> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <div class="container-fluid"><a class="navbar-brand" href="index.html">
+      <div class="container-fluid"><a class="navbar-brand" href="/">
         <img src="img/n.png" alt="" width="20%"> Desa Sumberagung</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -90,7 +90,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info Desa</a>
               <ul class="dropdown-menu">
                 <li >
-                  <a href="/informasikependudukan" class="dropdown-item">Informasi Kependudukan</a>
+                  <a href="/data gender" class="dropdown-item">Informasi Kependudukan</a>
                 </li>
                 <li>
                 <div role="separator" class="dropdown-divider"></div>
@@ -125,31 +125,9 @@
     <div class="row justify-content-center">    
       <div class="col-lg-12 d-flex justify-content-center">
         <i class="fas fa-database fa-3x text-success"></i>
-          <h1 class="mt-0 float-right ml-3">Data Statistik Desa</h1>
+          <h1 class="mt-0 float-right ml-3">Data Statistik Gender</h1>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-lg">
-          <div class="input-group mb-2 mt-2">
-            
-              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pilih Data</button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="/informasikependudukan">Data Pekerjaan</a>
-                <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/data pendidikan">Data Pendidikan</a>
-                <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/data agama">Data Agama</a>
-                <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/data gender">Data Gender</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <div class="row justify-content-center">
-      <div class="col-lg d-flex justify-content-center">
-        <h1>Agama</h1>      
-      </div>
-    </div>
+
   </div>
 <!-- content -->
 <div class="container">

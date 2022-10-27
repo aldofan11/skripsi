@@ -87,7 +87,7 @@
               aria-haspopup="true" aria-expanded="false">Info Desa</a>
             <ul class="dropdown-menu">
               <li>
-                <a href="/informasikependudukan" class="dropdown-item">Informasi Kependudukan</a>
+                <a href="/data gender" class="dropdown-item">Informasi Kependudukan</a>
               </li>
               <li>
                 <div role="separator" class="dropdown-divider"></div>
@@ -228,35 +228,68 @@
       </div>
     </div>
     <div class="row justify-content-center row-p">
+      @if ($kep)
       <div class="col-lg d-flex justify-content-center">
-        <figure class="figure mx-auto kepala">
-          <img src="img/kades.jpg" alt="kepala-desa" class="figure-img img-fluid rounded-circle">
+        <figure class="figure mx-auto">
+          <img src="{{ asset('@getPath(aparats)'.$kep->photo) }}" alt="" class="figure-img img-fluid rounded-circle">
           <figcaption class="figure-caption">
-            <h5>SUKRAM</h5>
-            <p>Kepala Desa sumberagung</p>
+            <h5>{{$kep->name}}</h5>
+            <p> 
+              @php
+              $name = '';
+              $arr = explode('_', $kep->position);
+              foreach($arr as $pos){
+                $name = $name .' '. ucwords($pos);
+              }
+              echo $name;
+            @endphp
+            </p>
           </figcaption>
         </figure>
       </div>
+      @endif
     </div>
     <div class="row justify-content-center row-p">
+      @if ($wak_kep)
       <div class="col-md-4 d-flex justify-content-center child">
         <figure class="figure mx-auto">
-          <img src="img/foto1.jpg" alt="" class="figure-img img-fluid rounded-circle">
+          <img src="{{ asset('@getPath(aparats)'.$wak_kep->photo) }}" alt="" class="figure-img img-fluid rounded-circle">
           <figcaption class="figure-caption">
-            <h5>MUJIANTO</h5>
-            <p>Wakil Kepala Desa</p>
+            <h5>{{$wak_kep->name}}</h5>
+            <p> 
+              @php
+              $name = '';
+              $arr = explode('_', $wak_kep->position);
+              foreach($arr as $pos){
+                $name = $name .' '. ucwords($pos);
+              }
+              echo $name;
+            @endphp
+            </p>
           </figcaption>
         </figure>
       </div>
+      @endif
+      @if ($sek)
       <div class="col-md-4 d-flex justify-content-center child">
         <figure class="figure mx-auto">
-          <img src="img/foto3.jpeg" alt="" class="figure-img img-fluid rounded-circle">
+          <img src="{{ asset('@getPath(aparats)'.$sek->photo) }}" alt="" class="figure-img img-fluid rounded-circle">
           <figcaption class="figure-caption">
-            <h5>SUNARSO</h5>
-            <p>Sekretaris </p>
+            <h5>{{$sek->name}}</h5>
+            <p> 
+              @php
+              $name = '';
+              $arr = explode('_', $sek->position);
+              foreach($arr as $pos){
+                $name = $name .' '. ucwords($pos);
+              }
+              echo $name;
+            @endphp
+            </p>
           </figcaption>
         </figure>
       </div>
+      @endif
     </div>
     <div class="row justify-content-center">
       <div class="col-8 d-flex justify-content-center">
@@ -274,39 +307,22 @@
     </div>
   </div>
   <div class="container">
-    <div class="row berita">
+    <div class="row berita @if(count($news) == 0) justify-content-center @endif">
+      @forelse ($news as $new)
       <div class="col">
         <div class="card" style="width: 18rem;">
-          <img src="img/berita1.jpeg" class="card-img-top" alt="...">
+          <img src="{{ asset('@getPath(news)'.$new->photo) }}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Sosialisasi pasar murah</h5>
-            <p class="card-text">Disterindag kabupaten blitar gelar operasi pasar migor curah di desa sumberagung.</p>
-            <a href="berita-detail.html" target="_blank">Selengkapnya...</a>
+            <h5 class="card-title">{{$new->title}}</h5>
+            <p class="card-text">{{$new->description}}</p>
           </div>
         </div>
+      </div>   
+      @empty
+      <div class="col-md-4 text-center">
+        belum ada galeri
       </div>
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img src="img/berita 2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">sosialisasi bupati blitar</h5>
-            <p class="card-text">Bupati blitar ajak UMKM yang ada di desa sumberagung pasarkan produk lokal jadi
-              nasional.</p>
-            <a href="#">Selengkapnya...</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img src="img/berita3.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Sosialisasi dari DLH</h5>
-            <p class="card-text">DLH blitar beri sosialisasi pembangunan taman keaneragaman hayati di desa sumberagung.
-            </p>
-            <a href="#">Selengkapnya...</a>
-          </div>
-        </div>
-      </div>
+      @endforelse
     </div>
     <div class="row justify-content-center">
       <div class="col-8 d-flex justify-content-center">

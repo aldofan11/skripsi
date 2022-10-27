@@ -22,7 +22,7 @@
   <body>
     <!-- navbar --> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <div class="container-fluid"><a class="navbar-brand" href="index.html">
+      <div class="container-fluid"><a class="navbar-brand" href="/">
         <img src="img/n.png" alt="" width="20%"> Desa Sumberagung</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -78,7 +78,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info Desa</a>
               <ul class="dropdown-menu">
                 <li >
-                  <a href="/informasikependudukan" class="dropdown-item">Informasi Kependudukan</a>
+                  <a href="/data gender" class="dropdown-item">Informasi Kependudukan</a>
                 </li>
                 <li>
                 <div role="separator" class="dropdown-divider"></div>
@@ -120,70 +120,22 @@
 </div>
  <div class="container border rounded">
       <div class="row berita">
+        @forelse ($informations as $information)
         <div class="col">
           <div class="card my-2" style="width: 25rem;">
-          <img src="img/alurKTP.jpg" class="card-img-top" alt="...">
+          <img src="{{ asset('@getPath(informations)'.$information->photo) }}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Alur Pembuatan KTP</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="berita-detail.html" target="_blank" >Selengkapnya...</a>
+              <h5 class="card-title">{{$information->title}}</h5>
+              <p class="card-text">{{$information->description}}</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card my-2" style="width: 25rem;">
-            <img src="img/alurKK.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Alur Membuat Kartu Keluarga</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" >Selengkapnya...</a>
-            </div>
-          </div>        
-        </div>
-        <div class="col">
-          <div class="card my-2" style="width: 25rem;">
-            <img src="img/alurSURATPINDAH.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Alur Membuat Surat Pindah</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" >Selengkapnya...</a>
-            </div>
-          </div>        
-        </div>
-        <div class="col">
-          <div class="card my-2" style="width: 18rem;">
-          <img src="img/workingspace.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Pelatihan Kader PKK</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="berita-detail.html" target="_blank" >Selengkapnya...</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card my-2" style="width: 18rem;">
-            <img src="img/jumbotron-bg.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" >Selengkapnya...</a>
-            </div>
-          </div>        
-        </div>
-        <div class="col">
-          <div class="card my-2" style="width: 18rem;">
-            <img src="img/img3.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" >Selengkapnya...</a>
-            </div>
-          </div>        
-        </div>
+            
+        @empty
+            Belum ada Berita
+        @endforelse
       </div>
     </div>
-
-
 </div>
 <!-- footer -->
 <footer>

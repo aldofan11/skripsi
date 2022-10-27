@@ -22,7 +22,7 @@
   <body>
     <!-- navbar --> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <div class="container-fluid"><a class="navbar-brand" href="index.html">
+      <div class="container-fluid"><a class="navbar-brand" href="/">
         <img src="img/n.png" alt="" width="20%"> Desa Sumberagung</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -78,7 +78,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info Desa</a>
               <ul class="dropdown-menu">
                 <li >
-                  <a href="/informasikependudukan" class="dropdown-item">Informasi Kependudukan</a>
+                  <a href="/data gender" class="dropdown-item">Informasi Kependudukan</a>
                 </li>
                 <li>
                 <div role="separator" class="dropdown-divider"></div>
@@ -120,66 +120,21 @@
 </div>
  <div class="container border rounded">
       <div class="row berita">
-        <div class="col">
-          <div class="card my-2" style="width: 18rem;">
-          <img src="img/berita1.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Sosialisasi Pasar Murah</h5>
-              <p class="card-text">Disterindag kabupaten blitar gelar operasi pasar migor curah di desa sumberagung.</p>
-              <a href="berita-detail.html" target="_blank" >Selengkapnya...</a>
+        @forelse ($news as $new)
+          <div class="col">
+            <div class="card my-2" style="width: 18rem;">
+            <img src="{{ asset('@getPath(news)'.$new->photo) }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{$new->title}}</h5>
+                <p class="card-text">{{$new->description}}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card my-2" style="width: 18rem;">
-            <img src="img/berita 2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Sosialisasi Bupati Blitar</h5>
-              <p class="card-text">Bupati blitar ajak UMKM yang ada di desa sumberagung pasarkan produk lokal jadi nasional.</p>
-              <a href="#" >Selengkapnya...</a>
-            </div>
-          </div>        
-        </div>
-        <div class="col">
-          <div class="card my-2" style="width: 18rem;">
-            <img src="img/berita3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Sosialisasi dari DLH</h5>
-              <p class="card-text">DLH blitar beri sosialisasi pembangunan taman keaneragaman hayati di desa sumberagung.</p>
-              <a href="#" >Selengkapnya...</a>
-            </div>
-          </div>        
-        </div>
-        <div class="col">
-          <div class="card my-2" style="width: 18rem;">
-          <img src="img/berita3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Pelatihan Kader PKK</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="berita-detail.html" target="_blank" >Selengkapnya...</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card my-2" style="width: 18rem;">
-            <img src="img/kirabudaya.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Kirab budaya</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" >Selengkapnya...</a>
-            </div>
-          </div>        
-        </div>
-        <div class="col">
-          <div class="card my-2" style="width: 18rem;">
-            <img src="img/gambar23.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Kirab</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" >Selengkapnya...</a>
-            </div>
-          </div>        
-        </div>
+        @empty
+        <p class="text-center">
+          Belum ada berita
+        </p>
+        @endforelse
       </div>
     </div>
 

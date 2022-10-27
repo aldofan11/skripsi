@@ -3,23 +3,23 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Aparat;
+use App\Models\Information;
 use Illuminate\Http\Request;
 
-class AparaturController extends Controller
+class InformationController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
     {
-        $galeries = Aparat::paginate(10);
+        $galeries = Information::paginate(10);
         if ($request->wantsJson()) {
-            return view('dashboard.aparat.pagination', compact('galeries'))->render();
+            return view('dashboard.document.pagination', compact('galeries'))->render();
         }
-        return view('dashboard.aparat.index', compact('galeries'));
+        return view('dashboard.document.index', compact('galeries'));
     }
 
     /**
@@ -41,18 +41,17 @@ class AparaturController extends Controller
     public function store(Request $request)
     {
         try {
-            $photo = $this->uploadImageAction->uploadAndGetFileName($request->photo, Aparat::FILE_PATH);
-            $galery = Aparat::create([
+            $photo = $this->uploadImageAction->uploadAndGetFileName($request->photo, Information::FILE_PATH);
+            $galery = Information::create([
                 'photo' => $photo,
-                'name' => $request->name,
-                'position' => $request->position,
-
+                'title' => $request->title,
+                'description' => $request->description,
             ]);
             return response()->json([
                 'status' => true,
                 'message' => [
                     'head' => 'Berhasil',
-                    'body' => "Aparatur $galery->position berhasil dibuat!"
+                    'body' => "Berita $galery->title berhasil dibuat!"
                 ]
             ], 201);
         } catch (\Throwable $th) {
@@ -75,10 +74,9 @@ class AparaturController extends Controller
      */
     public function show($id)
     {
-        $galery = Aparat::find($id);
-        $jabatan = Aparat::pluck('position');
+        $galery = Information::find($id);
         if (!$galery) return response()->json([], 404);
-        return response()->json(['data'=>$galery, 'jabatan'=> $jabatan]);
+        return response()->json($galery);
     }
 
     /**
@@ -101,13 +99,13 @@ class AparaturController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $galery = Aparat::find($id);
+        $galery = Information::find($id);
         $photo = "";
 
         if (!$galery) return response()->json([], 404);
         if ($request->photo) {
-            $this->deleteImageAction->deleteImageOnly(Aparat::FILE_PATH . '/' . $galery->photo);
-            $photo = $this->uploadImageAction->uploadAndGetFileName($request->photo, Aparat::FILE_PATH);
+            $this->deleteImageAction->deleteImageOnly(Information::FILE_PATH . '/' . $galery->photo);
+            $photo = $this->uploadImageAction->uploadAndGetFileName($request->photo, Information::FILE_PATH);
         } else {
             $photo = $galery->photo;
         }
@@ -125,13 +123,9 @@ class AparaturController extends Controller
      */
     public function destroy($id)
     {
-        $galery = Aparat::find($id);
+        $galery = Information::find($id);
         if (!$galery) return response()->json([], 404);
-        $this->deleteImageAction->destroy(Aparat::FILE_PATH, $galery);
+        $this->deleteImageAction->destroy(Information::FILE_PATH, $galery);
         return response()->json();
-    }
-    public function getJabatan()
-    {
-        return response()->json(Aparat::pluck('position'));
     }
 }
